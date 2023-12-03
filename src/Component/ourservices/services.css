@@ -1,0 +1,61 @@
+.serviceSection{
+    background: #F2EAD3;
+}
+.serviceSection .servicebox{
+    background: #DFD7BF;
+box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+padding: 23px;
+}
+.serviceSection h1{
+    margin-top: 23px;
+    text-align: center;
+    color: #3F2305;
+font-family: Dela Gothic One;
+font-size: 50px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+.serviceSection .card .card-title{
+    color: #3F2305;
+font-family: Dela Gothic One;
+font-size: 24px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+.serviceSection .card  p{
+    color: #3F2305;
+text-align: justify;
+font-family: Crete Round;
+font-size: 15px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+.serviceSection .card-body .bt1{
+    background: #3F2305;
+    color: #F5F5F5;
+font-family: Crete Round;
+font-size: 15px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+margin-left: 33px;
+
+border-radius: 0px;
+
+}
+.serviceSection .card-body .bt2{
+    fill: #F5F5F5;
+stroke-width: 1px;
+stroke: #000;
+color: #000;
+font-family: Crete Round;
+font-size: 15px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+margin-left: 23px;
+border-radius: 0px;
+}

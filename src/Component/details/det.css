@@ -1,0 +1,38 @@
+.detail_section img{
+    display: flex;
+    flex-direction: column;
+    padding: 17px;
+}
+
+.i img{
+    display: flex;
+    flex-direction: row;
+    padding: 17px;
+}
+body{
+    background: #F2EAD3; 
+    overflow-x: hidden;
+}
+.img_2 img{
+    width: 406px;
+    height: 535px;
+    flex-shrink: 0;
+}
+.det_sec{
+}
+ .right p{
+    float: left;
+    margin-top: 103px;
+    padding-left: 34px;
+}
+
+.con{
+    display: flex;
+padding-top: 110px;
+}
+
+ .right{
+    margin-top: 10px;
+    background: #DFD7BF;
+    margin-left: 10%;
+}

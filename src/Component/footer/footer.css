@@ -1,0 +1,35 @@
+.footer_section{
+    background: linear-gradient(90deg, #CFC094 0.05%, #DFD7BF 99.94%, #DFD7BF 99.94%);
+box-shadow: 0px -2px 10px 6px rgba(0, 0, 0, 0.15);
+}
+.section_1 p{
+    color: #3F2305;
+text-align: justify;
+
+font-family: Crete Round;
+font-size: 15px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+}
+
+.section_2 h3{
+    text-align: justify;
+    margin-left: 30px;
+    color: #3F2305;
+font-family: Crete Round;
+font-size: 30px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+}
+.section_2 ul li{
+    list-style: none;
+    cursor: pointer;
+    color: #000;
+font-family: Crete Round;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: 29px;
+}
