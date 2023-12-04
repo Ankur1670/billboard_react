@@ -128,6 +128,8 @@ line-height: normal;
     height: 15px;
     width: 15px;
     margin: 4px;
+    color: #3F2305;
+
 }
 .f{
     display: flex;
@@ -159,6 +161,14 @@ p.subH2{
     font-style: normal;
     font-weight: 400;
     line-height: normal; 
+}
+p.subH3{
+    color: #3F2305;
+font-family: Crete Round;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
 }
 
 

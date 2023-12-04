@@ -79,7 +79,7 @@ const Det = () => {
                 }}
                 width={100} stars={5}  cancel={false}/>  
 
-<p>20 Nov 2023</p>
+<p className='subH3'> 20 Nov 2023</p>
 </div>
            
             </div>
