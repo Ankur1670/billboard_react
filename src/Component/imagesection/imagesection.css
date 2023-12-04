@@ -1,17 +1,23 @@
 .imageSection{
     position: relative;
     display: inline-block;
-    background: linear-gradient(122deg, #000 0%, rgba(0, 0, 0, 0.00) 74.26%);
+    width: 100%;
+
 
 }
 .imageSection img{
     display: block;
-  
-    width: 1520px;
-height: 663px;
-background: linear-gradient(122deg, #000 0%, rgba(0, 0, 0, 0.00) 74.26%);
+
+    width: 100vw;
+height: 720px;
 
 
+}
+.black_box{
+    position:absolute;
+    background: linear-gradient(122deg, #000 0%, rgba(0, 0, 0, 0.00) 74.26%);
+    width: 100%;
+    height: 720px;
 }
 img::after{
     background: linear-gradient(122deg, #000 0%, rgba(0, 0, 0, 0.00) 74.26%);
