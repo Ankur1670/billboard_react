@@ -26,7 +26,7 @@ const Imgsec = () => {
         console.log(cities)
             const a=cc.map((obj2)=>{
                 if (obj2.includes(obj.target.value)){
-                    if ()
+                    // if ()
                     setCities([...cities,obj2])
                 }
             })
