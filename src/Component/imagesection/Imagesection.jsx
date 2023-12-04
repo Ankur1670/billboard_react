@@ -4,6 +4,7 @@ import './imagesection.css'
 const Imagesection = () => {
   return (
             <div className="imageSection mt-5">
+                <div className={'black_box'}></div>
                 <img src={img1} alt="" />
                 <div className="imageContent">
                     <p>Unlock the Power of</p>
