@@ -20,12 +20,22 @@ body{
 }
 .det_sec{
 }
- .right p{
-    float: left;
+ .right .heading{
     margin-top: 103px;
     padding-left: 34px;
+    color: #3F2305;
+font-family: Crete Round;
+font-size: 32px;
+font-style: normal;
+font-weight: bold;
+line-height: normal;
+   
 }
 
+.left{
+    width: 50%;
+    
+}
 .con{
     display: flex;
 padding-top: 110px;
@@ -35,4 +45,122 @@ padding-top: 110px;
     margin-top: 10px;
     background: #DFD7BF;
     margin-left: 10%;
+    width: 50%;
 }
+.star {
+    display: flex;
+    align-items: center;
+    
+}
+.star p{
+    margin-bottom: 0;
+    color: rgba(63, 35, 5, 0.49);
+font-family: Crete Round;
+font-size: 32px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+.dd{
+    font-family: Crete Round;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: right;
+}
+.button_section{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+.b {
+    border-radius: 5px;
+background: #3F2305;
+color: #F2EAD3;
+font-family: Crete Round;
+font-size: 28px;
+padding: 10px;
+padding-left: 15px;
+padding-right: 15px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+.a{
+    color: #3F2305;
+    
+}
+.c{
+    border-radius: 5px;
+    border: 0px;
+    background: #CFC094;
+    color: #3F2305;
+    font-family: Crete Round;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding: 10px;
+padding-left: 15px;
+padding-right: 15px;
+}
+.jj{
+    color: #3F2305;
+font-family: Crete Round;
+font-size: 44px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+.d{
+    margin-top: 28px;
+}
+.d p{
+    color: #3F2305;
+    font-family: Crete Round;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: bold;
+    line-height: normal;
+}
+.g{
+    height: 15px;
+    width: 15px;
+    margin: 4px;
+}
+.f{
+    display: flex;
+    align-items: center;
+}
+
+.f p{
+margin: 0;
+text-align: right;
+width: 100%;
+}
+
+ 
+
+
+p.subH1{
+    color: #3F2305;
+font-family: Crete Round;
+font-size: 22px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+
+p.subH2{
+    color: rgba(63, 35, 5, 0.49);
+    font-family: Crete Round;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal; 
+}
+
+
+
+

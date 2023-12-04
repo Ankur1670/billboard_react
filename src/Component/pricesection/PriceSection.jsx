@@ -40,7 +40,7 @@ Rajpur Rd,Dehradun</p>
                     offIcon: { className: 'a' },
 
                 }}
-                width={100} stars={5} cancel={false}/>
+                width={100} stars={5}  cancel={false}/>
 
 <div className="pbutton">
     <button type="button" onClick={()=>navigate(`/b/${obj.id}`)}>Book Now {obj.id}</button>
