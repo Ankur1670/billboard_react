@@ -1,0 +1,78 @@
+.left{
+    margin-top: 150px;
+    display: flex;
+    justify-content: center;
+}
+.a img{
+    height: 772px;
+}
+ h1{
+    color: #000;
+font-family: Crete Round;
+font-size: 40px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+.input_section form{
+margin-top: 33px;
+margin-left: 53px;
+}
+form #login{
+    padding: 20px;
+    margin-top: 10px;
+    border: 0px;
+    width: 100%;
+    border-bottom: 2px solid #3F2305;
+    background: #F2EAD3;}
+form #password{
+    padding: 20px;
+    margin-top: 10px;
+    border: 0px;
+    width: 100%;  
+    border-bottom: 2px solid #3F2305;
+    background: #F2EAD3;}
+
+    .button_section button{
+        border-radius: 10px;
+border: 1px solid #F2EAD3;
+background: #3F2305;
+width: 100%;
+padding-left: 23px;
+padding-right: 23px;
+padding-top: 10px;
+padding-bottom: 10px;
+color: #DFD7BF;
+text-align: center;
+font-family: Crete Round;
+font-size: 24px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+align-items: center;
+    }
+    .ss{
+        margin-top: 23px;
+    }
+    .ss p{
+        color: #CFC094;
+        text-align: center;
+        font-family: Crete Round;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+    .ss span{
+        color: #3F2305;
+font-family: Crete Round;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+cursor: pointer;
+    }
+    .name_section{
+        display: flex;
+    gap: 20px;
+    }
