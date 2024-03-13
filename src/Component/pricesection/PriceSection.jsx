@@ -2,6 +2,10 @@ import React from 'react'
 import './pricesection.css';
 import p1 from '../../assets/p1.png';
 import { Rating } from 'primereact/rating';
+import { useDispatch, useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
+
+
 import { FaStar } from "react-icons/fa";
 import { FaStarHalfAlt } from "react-icons/fa";
 // import StarRatings from './react-star-ratings';
@@ -15,9 +19,7 @@ const aa=[
     {name:'ankur',id:8},
 ]
 const Card=(obj)=>{
-    let navigate = useNavigate();
 
-    const [value,setValue]=useState([])
 
     return(
         
@@ -25,16 +27,22 @@ const Card=(obj)=>{
         <div className="container mt-3">
             <div className="row">
                 <div className="col-lg-4 px-0">
-                    <img src={p1} alt="" />
+                    <img src={obj.images[0]?.img} alt="" />
                 </div>
                 <div className="col-lg-4 price_p">
-                    <p>{obj.name} <br />
-Rajpur Rd,Dehradun</p>
-<p>Size: 12X18</p>
-<h3>₹5000/- </h3>
+                    <p>
+                        {obj.address.address+' '}
+                        {obj.address.landmark}
+                        <br />
+                        {obj.address.city +' '}
+                        {obj.address.state +' '}
+                        {obj.address.country +' '}
+                        </p>
+                    <p>Size: {obj.size}</p>
+                    <h3>₹{obj.price}/- </h3>
                 </div>
                 <div className="col-lg-4 mt-3" >
-                <Rating value={4} onChange={(e) => setValue(e.value) } 
+                <Rating value={obj.rating*10}
                 pt={{
                     onIcon: { className: 'a' },
                     offIcon: { className: 'a' },
@@ -42,8 +50,8 @@ Rajpur Rd,Dehradun</p>
                 }}
                 width={100} stars={5}  cancel={false}/>
 
-<div className="pbutton">
-    <button type="button" onClick={()=>navigate(`/b/${obj.id}`)}>Book Now {obj.id}</button>
+<div className="button">
+    <Link className={'button'} to={`/billboard/${obj.id}`}>Book Now {obj.id}</Link>
 </div>
 
                 </div>
@@ -59,11 +67,13 @@ Rajpur Rd,Dehradun</p>
 }
 
 const PriceSection = () => {
-    let navigate = useNavigate();
+    const todos = useSelector(state =>state.authReducer);
+    console.log(todos.data)
+
 
   return (
     <div className="price_section" >
-     {aa.map(Card)}
+     {todos.data.map(Card)}
     </div>
     
   )
