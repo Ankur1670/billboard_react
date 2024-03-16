@@ -13,13 +13,14 @@ body{
     background: #F2EAD3; 
     overflow-x: hidden;
 }
+
 .img_2 img{
-    width: 406px;
-    height: 535px;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
     flex-shrink: 0;
 }
-.det_sec{
-}
+
  .right .heading{
     margin-top: 103px;
     padding-left: 34px;
@@ -79,6 +80,7 @@ line-height: normal;
     width: 100%;
     display: flex;
     justify-content: space-evenly;
+    
 }
 .b {
     border-radius: 5px;

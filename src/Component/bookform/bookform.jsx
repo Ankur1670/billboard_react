@@ -3,6 +3,7 @@ import {useEffect, useState} from "react";
 import {useNavigate} from "react-router-dom";
 import {useDispatch} from "react-redux";
 import HandelError from "../utilities/handelError";
+import './book.css'
 
 const client = axios.create({
     baseURL: process.env.REACT_APP_URL,
@@ -55,13 +56,35 @@ const BookingForm = () => {
     setFormData({...formData,[e.target.name]:e.target.value})
     }
   return(
-      <form className={''} style={{paddingTop:'400px'}} onSubmit={handelsubmit}>
-          <input type={"date"} onChange={handelChange}  value={formData.start_date} name={'start_date'}/>
-          <input type={"date"} onChange={handelChange}  value={formData.end_date}  name={'end_date'}/>
-          <input type={"file"}
+      <form className={'book_form'}  onSubmit={handelsubmit}>
+        <div className="uplode_file">
+        <input type={"file"}
                  onChange={(e)=>setFormData({...formData,[e.target.name]:e.target.files[0]})}
                   name={'image'}/>
-          <input type={"submit"}  name={'submit'} value={"Book"}/>
+        </div>
+         
+                  <div className="start_date">
+                    <div className="container">
+                        <div className="row ">
+                            <div className="col-md-6 text-center">
+                            <h3 >Start Date</h3> 
+                  <input type={"date"} onChange={handelChange}  value={formData.start_date} name={'start_date'}/>
+                            </div>
+                            <div className="col-md-6 text-center    ">
+                            <h3>End Date</h3> 
+                            <input  type={"date"} onChange={handelChange}  value={formData.end_date}  name={'end_date'}/>
+                            </div>
+                        </div>
+                    </div>
+                    
+                  
+         
+          </div>
+        
+        <div className="booking_button">
+        <input type={"submit"}  name={'submit'} value={"Book"}/>
+
+        </div>
 
       </form>
   )

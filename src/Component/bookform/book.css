@@ -1,0 +1,52 @@
+.book_form{
+    padding-top: 170px;
+}
+.book_form  .uplode_file{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.uplode_file input{
+
+    border: 8px dotted brown;
+    padding: 50px;
+    width: 600px;
+
+}
+
+.book_form .start_date{
+    padding-top: 34px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.book_form .start_date input{
+    background-color: #3F2305;
+    color: white;
+    padding: 2px;
+    border-radius: 10px;
+    color-scheme: dark;
+}
+.book_form .booking_button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 30px
+    ;
+    
+}
+.book_form .booking_button input{
+    border-radius: 5px;
+    width: 200px;
+    background: #3F2305;
+    color: #F2EAD3;
+    font-family: Crete Round;
+    font-size: 28px;
+    padding: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}

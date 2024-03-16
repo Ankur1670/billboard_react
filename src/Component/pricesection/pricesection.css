@@ -9,6 +9,10 @@ height: 30px;
 width: 30px;
 margin: 4px;
 }
+.row img{
+object-fit: cover; 
+}
+
 .row .price_p p{
     margin-top: 40px;
     color: #3F2305;
@@ -17,20 +21,27 @@ margin: 4px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+  margin-left: 54px;
 }
 .row .price_p h3{
-    margin-top: 40px;
+    margin-top: 20px;
     color: #3F2305;
 font-family: Crete Round;
 font-size: 40px;
 font-style: normal;
 font-weight: 400;
 line-height: normal;
+margin-left: 54px;
+
+
 }
-.pbutton button{
-    margin-top: 130px;
+.row .rating-section .a{
+    margin-left: 20px;
+}
+.row   .button {
+    margin-top: 103px;
     
-    margin-left: 00px;
+    margin-left: 32px;
     width: 200px;
     height: 50px;
     border-radius: 5px;
@@ -41,4 +52,14 @@ line-height: normal;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    display: flex;;
+    align-items: center;
+    justify-content: center;
 }
+.button a {
+    color: #FFF;
+    text-decoration: none;
+   
+text-align: center;
+}
+

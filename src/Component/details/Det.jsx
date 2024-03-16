@@ -59,10 +59,10 @@ const Det = () => {
         <div className=" con">
             <div className="left">
                 <div className="left-element">
-                    <div className="w-25">
-                    {billBoardData.images.slice(1).map((obj)=><img className={'w-100 h-100'} src={obj.img}/>)}
+                    <div className="img_2">
+                    {billBoardData.images.slice(1,5).map((obj)=><img  src={obj.img}/>)}
                     </div>
-                    <div className="w-75">
+                    <div className="">
                     <img src={billBoardData.images[0].img} alt="" className='w-75' />
 
                     </div>

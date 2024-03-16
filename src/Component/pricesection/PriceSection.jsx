@@ -27,7 +27,7 @@ const Card=(obj)=>{
         <div className="container mt-3">
             <div className="row">
                 <div className="col-lg-4 px-0">
-                    <img src={obj.images[0]?.img} alt="" />
+                    <img src={obj.images[0]?.img} alt="" className='w-100 h-100'/>
                 </div>
                 <div className="col-lg-4 price_p">
                     <p>
@@ -41,7 +41,7 @@ const Card=(obj)=>{
                     <p>Size: {obj.size}</p>
                     <h3>₹{obj.price}/- </h3>
                 </div>
-                <div className="col-lg-4 mt-3" >
+                <div className="col-lg-4 mt-3 rating-section" >
                 <Rating value={obj.rating*10}
                 pt={{
                     onIcon: { className: 'a' },
@@ -51,7 +51,7 @@ const Card=(obj)=>{
                 width={100} stars={5}  cancel={false}/>
 
 <div className="button">
-    <Link className={'button'} to={`/billboard/${obj.id}`}>Book Now {obj.id}</Link>
+    <Link  to={`/billboard/${obj.id}`}>Book Now </Link>
 </div>
 
                 </div>
