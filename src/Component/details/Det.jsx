@@ -1,22 +1,12 @@
-import React, {useEffect} from 'react'
+import React, {useEffect, useState} from 'react'
 import './det.css'
-import smd1 from '../../assets/smd1.png';
 import doFormat from '../utilities/time'
-import d1 from '../../assets/d1.png';
 import { Rating } from 'primereact/rating';
-import { useState } from 'react';
 import axios from "axios";
 import {useDispatch, useSelector} from 'react-redux';
 import {useNavigate} from "react-router-dom";
 
-const img=[
-    smd1 ,
-    smd1 ,
-    smd1 ,
-    smd1 ,
-    smd1 ,
-    smd1
-]
+
 const client = axios.create({
     baseURL: process.env.REACT_APP_URL,
     headers:{
@@ -29,8 +19,9 @@ const HandelError=(error)=>{
 }
 const Det = () => {
     let navigate = useNavigate();
-    const [value,setValue]=useState([])
     const billBoardData=useSelector(state => state.billBoardData)
+    const [mainImg, setMainImg] = useState('')
+
     const dispatch=useDispatch()
     useEffect(() => {
         let list=window.location.href.split('//')[1].split('/')
@@ -60,10 +51,10 @@ const Det = () => {
             <div className="left">
                 <div className="left-element">
                     <div className="img_2">
-                    {billBoardData.images.slice(1,5).map((obj)=><img  src={obj.img}/>)}
+                    {billBoardData.images.slice(5).map((obj)=><img  onClick={()=>setMainImg(obj.img)} src={obj.img} alt={''}/>)}
                     </div>
                     <div className="">
-                    <img src={billBoardData.images[0].img} alt="" className='w-75' />
+                    <img src={mainImg?mainImg:billBoardData.images[0].img} alt="" className='w-75' />
 
                     </div>
                 </div>

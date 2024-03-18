@@ -9,7 +9,7 @@
     display: block;
 
     width: 100vw;
-height: 720px;
+height: 775px;
 
 
 }
@@ -32,30 +32,47 @@ font-style: normal;
 font-weight: 400;
 line-height: normal;
 }
+.imgContent-home{
+    position: absolute;
+    backdrop-filter: blur(20px) ;
+    display:flex;
+    padding:1rem;
+    top: 90%;
+    /*left: 5%;*/
+
+    color:#FFFFFF;
+    font-family: Crete Round, serif;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
 .bb-2{
     color: #F5F5F5;
-font-family: Dela Gothic One;
+    font-family: Dela Gothic One, serif;
 font-size: 40px;
 font-style: normal;
 font-weight: 400;
 line-height: normal;
 }
 .buttonSection{
-    display: flex;
-    flex-direction: column;
-    margin-left: 23px;
-    margin-top:  -23px;
+    /*display: flex;*/
+    /*!*flex-direction: column;*!*/
+    /*justify-content:center;*/
+    /*margin: 0;*/
+    /*margin-top:  -23px;*/
 }
 .buttonSection .input-group{
+    /*display:flex;*/
     align-items: center;
-    width: 600px;
-    padding-left: 100px
-    ;
+    justify-center:center;
+    /*width: 600px;*/
+    /*padding-left: 100px;*/
 }
 .buttonSection .input-group label{
     color: rgba(63, 35, 5, 0.49);
 
-font-family: Crete Round;
+    font-family: Crete Round, serif;
 font-size: 25px;
 font-style: normal;
 font-weight: 400;

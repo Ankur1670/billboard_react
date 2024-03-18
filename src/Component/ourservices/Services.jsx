@@ -1,66 +1,46 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
 import './services.css'
-import service from '../../assets/service.png'
+import axios from "axios";
+const client = axios.create({
+    baseURL: process.env.REACT_APP_URL,
 
+});
+const ServiceCard = (obj) => {
+  return(
+      <div className="col-lg-3">
+          <div className="card" >
+              <img className="card-img-top" src={obj.image} alt="Card image cap"/>
+              <div className="card-body">
+                  <h5 className="card-title">{obj.name}</h5>
+                  <p className="card-text">{obj.details}</p>
+              </div>
+
+              <div className="card-body">
+                  <button type="button" className="btn btn-primary bt1 ">Enquiry</button>
+                  <button type="button" className="btn btn-secondary bt2 ">Details</button>  </div>
+          </div>
+      </div>
+
+  )
+}
 const Services = () => {
+    const [serviceData, setServiceData] = useState ([])
+    useEffect ( () => {
+        client.get('our/services/').then((r)=>{
+            if(r.status===200){
+                setServiceData(r.data)
+        }
+
+        })
+    }, [] );
   return (
     <div className="serviceSection">
         <h1>OUR SERVICES</h1>
         <div className="servicebox">
         <div className="container ">
             <div className="row">
-                <div className="col-lg-3">
-                    <div class="card" >
-  <img class="card-img-top" src={service} alt="Card image cap"/>
-  <div class="card-body">
-    <h5 class="card-title">Flex Printing</h5>
-    <p class="card-text">Our primary focus is to build a particular brand image, shape culture and attain sustainable market growth.</p>
-  </div>
-  
-  <div class="card-body">
-  <button type="button" class="btn btn-primary bt1 ">Enquiry</button>
-<button type="button" class="btn btn-secondary bt2 ">Details</button>  </div>
-</div>
-                </div>
-                <div className="col-lg-3">
-                <div class="card" >
-  <img class="card-img-top" src={service} alt="Card image cap"/>
-  <div class="card-body">
-    <h5 class="card-title">Flex Printing</h5>
-    <p class="card-text">Our primary focus is to build a particular brand image, shape culture and attain sustainable market growth.</p>
-  </div>
-  
-  <div class="card-body">
-  <button type="button" class="btn btn-primary bt1 ">Enquiry</button>
-<button type="button" class="btn btn-secondary bt2 ">Details</button>  </div>
-</div>
-                </div>
-                <div className="col-lg-3">
-                <div class="card" >
-  <img class="card-img-top" src={service} alt="Card image cap"/>
-  <div class="card-body">
-    <h5 class="card-title">Flex Printing</h5>
-    <p class="card-text">Our primary focus is to build a particular brand image, shape culture and attain sustainable market growth.</p>
-  </div>
-  
-  <div class="card-body">
-  <button type="button" class="btn btn-primary bt1 ">Enquiry</button>
-<button type="button" class="btn btn-secondary bt2">Details</button>  </div>
-</div>
-                </div>
-                <div className="col-lg-3">
-                <div class="card" >
-  <img class="card-img-top" src={service} alt="Card image cap"/>
-  <div class="card-body">
-    <h5 class="card-title">Flex Printing</h5>
-    <p class="card-text">Our primary focus is to build a particular brand image, shape culture and attain sustainable market growth.</p>
-  </div>
-  
-  <div class="card-body">
-  <button type="button" class="btn btn-primary bt1 ">Enquiry</button>
-<button type="button" class="btn btn-secondary bt2 ">Details</button>  </div>
-</div>
-                </div>
+                {serviceData.map(ServiceCard)}
+
             </div>
         </div>
         </div>
