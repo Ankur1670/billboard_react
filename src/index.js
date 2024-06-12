@@ -4,6 +4,7 @@ import App from './App';
 import './index.css';
 import {store} from "./redux_hook";
 import {Provider, useDispatch} from "react-redux"
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const Main = () => {
   return(

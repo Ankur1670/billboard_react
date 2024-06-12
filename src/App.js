@@ -3,7 +3,9 @@ import {BrowserRouter, Routes, Route, useNavigate} from "react-router-dom";
 import Home from './pages/home';
 import Book from './pages/book';
 import Detail from './pages/detail';
+import Generations from './pages/generations';
 import Booking from './pages/booking';
+import LoadingScreen from './pages/loadingScreen';
 import Successfully from './pages/successfully.jsx';
 import {Provider, useDispatch, useSelector} from "react-redux"
 import {store} from "./redux_hook";
@@ -13,6 +15,9 @@ import Sign from './pages/sign';
 import axios from "axios";
 import HandelError from "./Component/utilities/handelError";
 import {Navigate } from 'react-router-dom';
+import Cart from "./pages/cart";
+import CartPage from "./pages/cart";
+import NotFound from "./pages/404";
 
 const client = axios.create({
     baseURL: process.env.REACT_APP_URL,
@@ -54,6 +59,7 @@ const Logout = () => {
 function App() {
 
     const data=useSelector(state => state.userData)
+    const loading=useSelector(state => state.LoadingHandling)
     console.log(data.id)
     if (data.id===-1){
         LoginCheck()
@@ -65,24 +71,30 @@ function App() {
 
 
 
-    console.log(isLogin)
+    console.log(loading.loading,'asdfasd')
   return (
     <div className="App">
-
+        {loading.loading? <LoadingScreen/>:(
             <BrowserRouter>
                 <Routes>
+
                     <Route path="/" element={<Home home={true} />}/>
                     <Route path="/search" element={<Book />}/>
                     <Route path="/billboard/:id" element={<Detail />}/>
+                    <Route path="/billboard/create/:id" element={< Generations />}/>
                     <Route path="/billboard/Booking/:id" element={data.id!==-1?<Booking />:<Log/>}/>
                     <Route path="/order/successfully/" element={-1 !== data.id?<Successfully />:<Log/>}/>
                     <Route path="/login" element={<Log />}></Route>
                     <Route path="/signup" element={<Sign />}/>
                     <Route path="/logout" element={<Logout />}/>
+                    <Route path="/cart" element={<CartPage />}/>
+                    <Route path="/*" element={<NotFound />}/>
 
 
                 </Routes>
             </BrowserRouter>
+        )}
+
     </div>
     );
 

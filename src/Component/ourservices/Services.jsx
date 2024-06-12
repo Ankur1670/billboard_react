@@ -7,9 +7,9 @@ const client = axios.create({
 });
 const ServiceCard = (obj) => {
   return(
-      <div className="col-lg-3">
-          <div className="card" >
-              <img className="card-img-top" src={obj.image} alt="Card image cap"/>
+      <div className="col-lg-3" >
+          <div className="card" style={{height:550}} >
+              <img className="card-img-top" src={obj.image} style={{height:300}} alt="Card image cap"/>
               <div className="card-body">
                   <h5 className="card-title">{obj.name}</h5>
                   <p className="card-text">{obj.details}</p>

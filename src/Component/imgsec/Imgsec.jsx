@@ -1,19 +1,14 @@
 import React, {useEffect} from 'react'
 import './imgsec.css';
 import axios from "axios";
-import { useDispatch } from 'react-redux';
+import {useDispatch, useSelector} from 'react-redux';
 
 
 
 import img1 from '../../assets/img1.png'
 import { useState } from 'react';
+import {client} from "../../Axios";
 
-const client = axios.create({
-    baseURL: process.env.REACT_APP_URL,
-    headers:{
-        'Content-Type': 'application/json'
-    },
-});
 const HandelError=(error)=>{
     alert('error')
     console.log(error)
@@ -24,7 +19,7 @@ const Imgsec = () => {
     const [cities,setCities]=useState([])
     const [location,setLocation]=useState('')
     const [locations,setLocations]=useState([])
-    const [cityDBList,setCityDBList]=useState()
+    const [cityDBList,setCityDBList]=useState([])
     const [locationDBList,setLocationDBList]=useState()
     const dispatch = useDispatch();
 
@@ -52,6 +47,10 @@ const Imgsec = () => {
                 dispatch({
                     type: 'DATA_ADD',
                     payload: response.data
+                });
+                dispatch({
+                    type: 'BILLBOARD_LOADING',
+                    payload: false
                 });
 
             }
@@ -84,11 +83,19 @@ const Imgsec = () => {
 
     }
     const handelSearch=()=>{
+        dispatch({
+            type: 'BILLBOARD_LOADING',
+            payload: true
+        });
         client.get(`billBoard/?city=${city}&address=${location}`).then((response)=>{
             if(response.status===200){
                 dispatch({
                     type: 'DATA_ADD',
                     payload: response.data
+                });
+                dispatch({
+                    type: 'BILLBOARD_LOADING',
+                    payload: false
                 });
 
             }
@@ -129,6 +136,7 @@ const Imgsec = () => {
                                               location</label>
 
                                           <input type="search" id="form1" className="form-control"
+
                                                  onChange={ handelChangeLocation } value={ location }/>
                                           <div id={ 'cities' }>{ locations.map ( ( obj ) => <a onClick={ () => {
                                               setLocation ( obj )
@@ -138,8 +146,8 @@ const Imgsec = () => {
                                       </div>
                                   </div>
                               </div>
-                              <div className="col-lg-2 d-flex align-items-end   ">
-                                          <div className={ 'button m-0 ' } onClick={ handelSearch }>Search</div>
+                              <div className="col-lg-2 d-flex align-items-md-end justify-content-center mt-md-0 mt-3     ">
+                                          <div className={ 'button m-0 w-75' } onClick={ handelSearch }>Search</div>
 
 
                               </div>

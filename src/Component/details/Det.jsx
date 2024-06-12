@@ -54,7 +54,7 @@ const Det = () => {
                     {billBoardData.images.slice(5).map((obj)=><img  onClick={()=>setMainImg(obj.img)} src={obj.img} alt={''}/>)}
                     </div>
                     <div className="">
-                    <img src={mainImg?mainImg:billBoardData.images[0].img} alt="" className='w-75' />
+                    <img src={mainImg?mainImg:billBoardData.images[0].img} alt="" className='w-md-75 w-100' />
 
                     </div>
                 </div>
@@ -85,7 +85,7 @@ const Det = () => {
             <button className="b" onClick={()=>navigate(`/billboard/Booking/${billBoardData.id}`)}>
                 Book Now <div className='dd'>With your Design</div>
             </button>
-            <button className="c">
+            <button className="c" onClick={()=>navigate(`/billboard/create/${billBoardData.id}`)}>
             Create Design  <div className='dd'>and Book Now  </div>
             </button>
         </div>

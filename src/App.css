@@ -4,3 +4,11 @@
   margin: 0;
   scroll-behavior: smooth;
 }
+
+.input-placeholder::placeholder {
+  color: #ff0000;
+}
+.input-placeholder::-ms-input-placeholder{
+  color: #c9c8c8;
+
+}

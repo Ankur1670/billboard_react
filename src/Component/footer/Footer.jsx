@@ -9,10 +9,21 @@ const client = axios.create({
 });
 const Footer = () => {
     const [myCompanyData, setMyCompanyData] = useState ({})
+    const [serviceData, setServiceData] = useState ([])
+
     useEffect ( () => {
         client.get('company/details/').then((r)=>{
             if(r.status===200){
                 setMyCompanyData(r.data[0])
+            }
+
+        })
+    }, [] );
+
+    useEffect ( () => {
+        client.get('our/services/').then((r)=>{
+            if(r.status===200){
+                setServiceData(r.data)
             }
 
         })
@@ -22,7 +33,7 @@ const Footer = () => {
         <div className="container pt-4">
             <div className="row">
                 <div className="col-lg-3 section_1">
-                    <img src={myCompanyData?.logo} alt="" /> <br />
+                    <img  style={{width:200}} src={myCompanyData?.logo} alt="" /> <br />
                     
                     <p className='mt-2'> <FaLocationDot /> {myCompanyData?.address}</p>
                     <p><MdCall />{myCompanyData?.mobile_number}</p>
@@ -32,10 +43,9 @@ const Footer = () => {
                 <div className="col-lg-3 section_2 ">
 <h3>SERVICES</h3>
 <ul>
-    <li>Flex Printing</li>
-    <li>Flex Printing</li>
-    <li>Flex Printing</li>
-    <li>Flex Printing</li>
+    {serviceData.map((obj)=><li>{obj.name}</li>)}
+
+
 </ul>
                 </div>
                 <div className="col-lg-3 section_2">

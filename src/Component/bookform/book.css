@@ -36,7 +36,7 @@
     ;
     
 }
-.book_form .booking_button input{
+.book_form .booking_button .input{
     border-radius: 5px;
     width: 200px;
     background: #3F2305;
